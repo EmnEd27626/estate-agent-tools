@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Smart tools and templates for estate agents">
+  <meta property="og:title" content="Modern Agents Shop">
+  <meta property="og:description" content="Smart tools and templates for estate agents">
+  <meta property="og:image" content="/assets/modern_agents_logo.png">
+  <link rel="icon" href="/assets/modern_agents_logo.png" type="image/png">
+  <link href="https://fonts.googleapis.com/css2?family=Satoshi&display=swap" rel="stylesheet">
+  <title>Modern Agents Shop</title>
+  <style>
+    body {
+      font-family: 'Satoshi', sans-serif;
+      background-color: #111;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+    }
+
+    .shop-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      background-color: #000;
+    }
+
+    .logo {
+      height: 100px;
+    }
+
+    .shop-container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .tagline {
+      font-size: 1rem;
+      color: #ccc;
+      margin-bottom: 2rem;
+    }
+
+    .review-section {
+      max-width: 800px;
+      margin: 3rem auto 2rem;
+      display: grid;
+      gap: 2rem;
+    }
+
+    .review {
+      font-style: italic;
+      color: #ccc;
+      font-size: 1.1rem;
+      line-height: 1.6;
+      position: relative;
+      padding-left: 2rem;
+    }
+
+    .review::before {
+      content: '“';
+      font-size: 2rem;
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: #f5c518;
+    }
+
+    .review-author {
+      text-align: right;
+      font-style: normal;
+      margin-top: 0.75rem;
+      color: #999;
+      font-size: 0.95rem;
+    }
+
+    .stars {
+      color: #f5c518;
+      font-size: 1.1rem;
+      margin-bottom: 0.3rem;
+    }
+
+    .product-section {
+      margin-bottom: 3rem;
+      text-align: left;
+    }
+
+    .product-card {
+      background: #1a1a1a;
+      border: 1px solid #333;
+      border-radius: 10px;
+      padding: 1rem;
+      margin-top: 1rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      display: inline-block;
+      width: calc(50% - 1rem);
+      vertical-align: top;
+      margin-right: 1rem;
+    }
+
+    .product-card:nth-child(even) {
+      margin-right: 0;
+    }
+
+    .product-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.6);
+    }
+
+    .product-card img {
+      max-width: 100%;
+      border-radius: 6px;
+      margin-bottom: 1rem;
+    }
+
+    .product-card h3 {
+      font-size: 1.1rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .product-card span {
+      font-weight: normal;
+      color: #aaa;
+    }
+
+    .price {
+      color: #bbb;
+      font-size: 0.95rem;
+    }
+
+    .product-button {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.4rem 1rem;
+      background-color: #fff;
+      color: #000;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+      transition: background-color 0.2s ease;
+    }
+
+    .product-button:hover {
+      background-color: #f5c518;
+      color: #111;
+    }
+  </style>
+</head>
+<body>
+  <header class="shop-header">
+    <img src="/assets/modern_agents_logo.png" alt="Modern Agents Logo" class="logo" />
+  </header>
+
+  <main class="shop-container">
+    <h1>Tools & Templates to Help You Win More Instructions</h1>
+    <p class="tagline">Professional letter templates and tools to boost instructions — all editable, brandable, and field-tested.</p>
+
+    <section class="review-section">
+      <div class="review">
+        <div class="stars">★★★★★</div>
+        Professional, editable, and saved us hours. These letters are gold.
+        <div class="review-author">– J. Hughes, Lettings Director</div>
+      </div>
+      <div class="review">
+        <div class="stars">★★★★★</div>
+        Clean, modern and exactly what our branch needed to stand out in a crowded market.
+        <div class="review-author">– R. Patel, Sales Manager</div>
+      </div>
+      <div class="review">
+        <div class="stars">★★★★★</div>
+        The bundle paid for itself with one instruction. Fantastic value.
+        <div class="review-author">– M. Lewis, Branch Owner</div>
+      </div>
+    </section>
+
+    <section class="product-section">
+      <h2>Canvassing Letters</h2>
+      <div class="product-card">
+        <img src="/assets/canvasspack.png" alt="Canvassing Pack Cover">
+        <h3>Canvassing Letter Pack <span>(8 Templates)</span></h3>
+        <div class="price">£14.99</div>
+        <a href="https://modernagents.gumroad.com/l/canvasspack" class="product-button">View Product</a>
+      </div>
+    </section>
+
+    <section class="product-section">
+      <h2>Valuation & Instruction</h2>
+      <div class="product-card">
+        <img src="/assets/valuationpack.png" alt="Valuation Pack">
+        <h3>Valuation & Instruction Pack</h3>
+        <div class="price">Coming Soon</div>
+        <a href="#" class="product-button">Preview</a>
+      </div>
+    </section>
+
+    <section class="product-section">
+      <h2>Sales Progression</h2>
+      <div class="product-card">
+        <img src="/assets/salespack.png" alt="Sales Progression">
+        <h3>Sales Progression Letters</h3>
+        <div class="price">Coming Soon</div>
+        <a href="#" class="product-button">Preview</a>
+      </div>
+    </section>
+
+    <section class="product-section">
+      <h2>Bundles & Offers</h2>
+      <div class="product-card">
+        <img src="/assets/bundlepack.png" alt="Complete Bundle">
+        <h3>Complete Template Library</h3>
+        <div class="price">Coming Soon</div>
+        <a href="#" class="product-button">Preview</a>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
