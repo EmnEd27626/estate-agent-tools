@@ -1,0 +1,126 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="UK Stamp Duty Calculator 2025 for estate agents and property buyers. Instantly calculate stamp duty on residential properties."/>
+  <title>Stamp Duty Calculator UK (2025) | Modern Agents</title>
+  <link rel="stylesheet" href="/assets/styles.css" />
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #111;
+      color: #e0e0e0;
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+    label, input, select {
+      display: block;
+      width: 100%;
+      margin-top: 1rem;
+      font-size: 1rem;
+    }
+    input, select {
+      padding: 0.6rem;
+      background: #222;
+      border: 1px solid #444;
+      color: #fff;
+    }
+    button {
+      margin-top: 1.5rem;
+      padding: 0.75rem 1.5rem;
+      background: #f5c248;
+      border: none;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .result {
+      margin-top: 2rem;
+      font-size: 1.25rem;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <header style="text-align:center; margin-bottom: 2rem;">
+    <img src="/assets/modern_agents_logo.png" alt="Modern Agents Logo" width="120" height="120" style="display:block; margin:0 auto;" />
+    <nav style="margin-top:1rem;">
+      <a href="/index.html" style="margin: 0 1rem; color:#c7c7c7; text-decoration:none; font-weight:600;">Home</a>
+      <a href="/shop.html" style="margin: 0 1rem; color:#c7c7c7; text-decoration:none; font-weight:600;">Shop</a>
+      <a href="/blog.html" style="margin: 0 1rem; color:#c7c7c7; text-decoration:none; font-weight:600;">Blog</a>
+    </nav>
+  </header>
+
+  <h1 style="color:#fff;">Stamp Duty Calculator (UK 2025)</h1>
+  <p>Use our simple calculator to work out stamp duty for residential properties in England and Northern Ireland. Updated for 2025.</p>
+
+  <label for="price">Property Price (£):</label>
+  <input type="number" id="price" placeholder="Enter property value" />
+
+  <label for="buyerType">Buyer Type:</label>
+  <select id="buyerType">
+    <option value="standard">Standard Buyer</option>
+    <option value="first">First-Time Buyer</option>
+    <option value="additional">Additional Property</option>
+  </select>
+
+  <button onclick="calculateStampDuty()">Calculate Stamp Duty</button>
+
+  <div class="result" id="result"></div>
+
+  <script>
+    function calculateStampDuty() {
+      const price = parseFloat(document.getElementById('price').value);
+      const buyerType = document.getElementById('buyerType').value;
+      let duty = 0;
+
+      if (isNaN(price) || price <= 0) {
+        document.getElementById('result').textContent = 'Please enter a valid property price.';
+        return;
+      }
+
+      let bands = [];
+
+      if (buyerType === 'first') {
+        if (price <= 425000) {
+          duty = 0;
+        } else {
+          bands = [
+            [425000, 625000, 0.05]
+          ];
+        }
+      } else if (buyerType === 'additional') {
+        bands = [
+          [0, 250000, 0.03],
+          [250000, 925000, 0.08],
+          [925000, 1500000, 0.13],
+          [1500000, Infinity, 0.15]
+        ];
+      } else {
+        bands = [
+          [250000, 925000, 0.05],
+          [925000, 1500000, 0.10],
+          [1500000, Infinity, 0.12]
+        ];
+      }
+
+      for (let band of bands) {
+        const [min, max, rate] = band;
+        if (price > min) {
+          const taxable = Math.min(price, max) - min;
+          duty += taxable * rate;
+        }
+      }
+
+      document.getElementById('result').innerHTML = `Stamp Duty: <strong>£${duty.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}</strong>`;
+    }
+  </script>
+
+  <footer style="margin-top: 4rem; text-align:center; font-size: 0.9rem; color:#777;">
+    Need branded property letters or valuation tools? <a href="/shop.html" style="color:#f5c248;">Visit our shop</a>.<br />
+    © Modern Agents 2025. All rights reserved.
+  </footer>
+</body>
+</html>
