@@ -1,0 +1,146 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Modern Agents</title>
+  <link href="https://fonts.googleapis.com/css2?family=Satoshi&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: #0d0d0d;
+      color: #e0e0e0;
+      font-family: 'Satoshi', sans-serif;
+      margin: 0;
+      padding: 2rem;
+    }
+    .logo {
+      display: block;
+      margin: 0 auto 2rem;
+      height: 100px;
+    }
+    h1 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .intro {
+      max-width: 700px;
+      margin: 0 auto 2rem;
+      text-align: center;
+      font-size: 1.15rem;
+      color: #aaa;
+    }
+    .tabs {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin: 2rem 0 2.5rem;
+    }
+    .tab-button {
+      background: transparent;
+      border: 1px solid #444;
+      color: #ccc;
+      padding: 0.6rem 1.5rem;
+      font-size: 1rem;
+      border-radius: 30px;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+    .tab-button.active,
+    .tab-button:hover {
+      background: #fff;
+      color: #000;
+      font-weight: 600;
+    }
+    .tab-content {
+      display: none;
+      max-width: 900px;
+      margin: 0 auto;
+      transition: opacity 0.3s ease;
+    }
+    .tab-content.active {
+      display: block;
+    }
+    .tab-box {
+      background: #1a1a1a;
+      padding: 2rem;
+      border-radius: 16px;
+      box-shadow: 0 0 0 1px #222;
+    }
+    .tab-box h2 {
+      font-size: 1.5rem;
+      margin-top: 0;
+      color: #ddd;
+    }
+    .tab-box h3 {
+      font-size: 1.25rem;
+      color: #bbb;
+    }
+    .tab-box p {
+      color: #aaa;
+      line-height: 1.6;
+    }
+    .tab-box a {
+      display: inline-block;
+      margin-top: 1rem;
+      text-decoration: none;
+      color: #fff;
+      background: #444;
+      padding: 0.6rem 1.2rem;
+      border-radius: 8px;
+      font-weight: 500;
+      transition: background 0.3s ease;
+    }
+    .tab-box a:hover {
+      background: #888;
+      color: #000;
+    }
+  </style>
+</head>
+<body>
+  <img src="/assets/modern_agents_logo.png" alt="Modern Agents Logo" class="logo" />
+  <h1>Modern Agents</h1>
+  <div class="intro">
+    <p>Download ready-to-send estate agency templates, marketing tools, and affiliate guides — all designed to help you grow instructions and earn more, with less effort.</p>
+  </div>
+
+  <div class="tabs">
+    <button class="tab-button active" onclick="showTab('shop')">Shop</button>
+    <button class="tab-button" onclick="showTab('articles')">Articles</button>
+  </div>
+
+  <div id="shop" class="tab-content active">
+    <div class="tab-box" style="text-align: center;">
+      <h2>Explore the Template Store</h2>
+      <p>Professionally written letters and packs — instantly downloadable and ready to use.</p>
+      <a href="/shop.html">Browse Products</a>
+    </div>
+  </div>
+
+  <div id="articles" class="tab-content">
+    <div class="tab-box">
+      <h2>Featured Article</h2>
+      <h3>Top Cameras for Property Photography in 2025</h3>
+      <p>Want sharper photos that win more instructions? We've reviewed the best budget and pro camera setups for estate agents — including accessories and Amazon links.</p>
+      <a href="/top-cameras-2025.html">Read the Full Guide →</a>
+    </div>
+    <div class="tab-box" style="margin-top: 2rem;">
+      <h3>Best Printers for Estate Agency Offices (2025)</h3>
+      <p>From fast inkjets to professional laser models, these are the best printers for agents handling brochures, letters and more. Reviewed for speed, cost, and quality.</p>
+      <a href="/best-printers-2025.html">View Printer Recommendations →</a>
+    </div>
+  </div>
+
+  <script>
+    function showTab(tabId) {
+      const tabs = document.querySelectorAll('.tab-content');
+      const buttons = document.querySelectorAll('.tab-button');
+      tabs.forEach(tab => tab.classList.remove('active'));
+      buttons.forEach(btn => btn.classList.remove('active'));
+      document.getElementById(tabId).classList.add('active');
+      event.target.classList.add('active');
+    }
+  </script>
+</body>
+</html>

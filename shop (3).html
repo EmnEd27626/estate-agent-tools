@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shop – Modern Agents</title>
+  <link href="https://fonts.googleapis.com/css2?family=Satoshi&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: #0d0d0d;
+      color: #e0e0e0;
+      font-family: 'Satoshi', sans-serif;
+      margin: 0;
+      padding: 2rem;
+    }
+    .logo {
+      display: block;
+      margin: 0 auto 2rem;
+      height: 80px;
+    }
+    h1 {
+      text-align: center;
+      font-size: 2.3rem;
+      margin-bottom: 0.5rem;
+    }
+    .intro {
+      max-width: 700px;
+      margin: 0 auto 2rem;
+      text-align: center;
+      font-size: 1.1rem;
+      color: #aaa;
+    }
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      max-width: 1000px;
+      margin: 2rem auto;
+    }
+    .product {
+      background: #1a1a1a;
+      padding: 1.5rem;
+      border-radius: 14px;
+      text-align: center;
+      box-shadow: 0 0 0 1px #222;
+    }
+    .product img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+    }
+    .product h2 {
+      font-size: 1.25rem;
+      margin: 0.5rem 0;
+      color: #fff;
+    }
+    .product p {
+      color: #bbb;
+      font-size: 0.95rem;
+      margin: 0.5rem 0 1rem;
+    }
+    .product .price {
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: 0.8rem;
+    }
+    .product a {
+      background: #fff;
+      color: #000;
+      text-decoration: none;
+      padding: 0.6rem 1.2rem;
+      border-radius: 8px;
+      display: inline-block;
+      transition: background 0.3s ease;
+    }
+    .product a:hover {
+      background: #ccc;
+    }
+  </style>
+</head>
+<body>
+  <img src="/assets/modern_agents_logo.png" alt="Modern Agents Logo" class="logo" />
+  <h1>Template Shop</h1>
+  <div class="intro">
+    <p>Professionally written letter packs and templates — designed for agents who want to win more instructions with less hassle.</p>
+  </div>
+  <div class="products">
+    <div class="product">
+      <img src="/assets/canvasspack.png" alt="Canvass Pack">
+      <h2>Canvassing Letter Pack</h2>
+      <p>8 editable templates to help you generate valuation leads and stand out locally.</p>
+      <div class="price">£14.99</div>
+      <a href="https://modernagents.gumroad.com/l/canvasspack">View Product</a>
+    </div>
+  </div>
+</body>
+</html>
